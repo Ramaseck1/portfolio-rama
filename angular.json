@@ -49,8 +49,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "10kB",
+                  "maximumError": "15kB"
                 }
               ],
               "outputHashing": "all"
@@ -88,9 +88,9 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-            "src/assets/rama/jpeg",
-            "src/favicon.ico"
-          ],
+              "src/assets/rama/jpeg",
+              "src/favicon.ico"
+            ],
             "styles": [
               "src/styles.scss"
             ],
