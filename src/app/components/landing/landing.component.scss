@@ -1,0 +1,662 @@
+:host {
+  display: block;
+}
+
+.landing {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(240, 71, 97, 0.45),
+      transparent 30%
+    ),
+    #98a2d4;
+
+  color: #172044;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #6c7185;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #172044;
+}
+/* =========================
+   NAVBAR
+========================= */
+
+.landing-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 28px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 20;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 20px;
+
+  span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3aebc;
+    color: #172044;
+
+    font-weight: 800;
+  }
+
+  strong {
+    font-size: 20px;
+  }
+}
+
+
+.nav-icons {
+  display: flex;
+  gap: 34px;
+  margin-left: 80px;
+}
+
+.nav-icon {
+  color: #172044;
+  text-decoration: none;
+
+  font-size: 22px;
+
+  transition: 0.3s;
+
+  &:hover,
+  &.active {
+    color: #d77d91;
+    transform: translateY(-2px);
+  }
+}
+.nav-icon span {
+    width: 320px;
+    height: 120px;
+    font-size: 20px;
+}
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language {
+  border: none;
+  background: transparent;
+
+  font-weight: 600;
+  color: #172044;
+
+  cursor: pointer;
+}
+
+.language.active {
+  border-bottom: 2px solid #172044;
+}
+
+.theme-btn {
+  text-decoration: none;
+
+  width:100%;
+  height: 42px;
+
+padding: 5px 20px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  border: 2px solid #172044;
+
+  background: #f5a5b1;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+.cv-btn {
+  text-decoration: none;
+
+  background: #f7a7b7;
+  color: rgb(0, 0, 0);
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.landing-content {
+  min-height: 100vh;
+
+  width: 86%;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 60px;
+
+  padding-top: 50px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+  max-width: 620px;
+}
+
+.hello {
+  font-size: 30px;
+  margin-bottom: 5px;
+
+  color: #000000;
+}
+
+.intro h1 {
+  font-size: clamp(55px, 7vw, 95px);
+
+  line-height: 0.95;
+
+  margin: 0 0 20px;
+
+  font-weight: 800;
+
+  letter-spacing: -4px;
+}
+
+.intro h1 span {
+  color: #d77d91;
+}
+
+.intro h2 {
+  font-size: clamp(25px, 3vw, 40px);
+
+  line-height: 1.15;
+
+  margin-bottom: 25px;
+
+  font-weight: 400;
+}
+
+.intro h2 strong {
+  font-weight: 800;
+}
+
+.description {
+  max-width: 590px;
+
+  font-size: 23px;
+  line-height: 1.7;
+
+  color: #505a79;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+  display: flex;
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 15px 25px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 20px;
+
+  transition: 0.3s;
+}
+
+.primary-btn {
+  background: #f7a7b7;
+  color: #172044;
+
+  box-shadow: 5px 5px 0 #172044;
+
+  span {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #172044;
+  }
+}
+
+.secondary-btn  {
+  background: #eeeeee;
+  color: #172044;
+
+  box-shadow: 5px 5px 0 #172044;
+
+  span {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 #172044;
+  }
+}
+
+.secondary-btn {
+  border: 1.5px solid #172044;
+  color: #172044;
+
+  &:hover {
+    background: #172044;
+    color: white;
+  }
+}
+
+
+/* =========================
+   DISPONIBILITE
+========================= */
+
+.availability {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #2d3a61;
+
+  font-size: 24px;
+}
+
+.availability span {
+  width: 15px;
+  height: 15px;
+
+  background: #62b891;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 5px rgba(98, 184, 145, 0.15);
+}
+
+
+/* =========================
+   VISUAL
+========================= */
+
+.visual {
+  position: relative;
+
+  height: 620px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-bg {
+  position: absolute;
+
+  width: 490px;
+  height: 520px;
+
+  background: #fafafa;
+
+  border-radius:
+    48% 52% 42% 58%
+    / 45% 40% 60% 55%;
+
+  transform: rotate(5deg);
+
+  box-shadow:
+    0 30px 80px rgba(44, 51, 92, 0.12);
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-circle {
+  position: relative;
+
+  width: 300px;
+  height: 390px;
+
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-placeholder {
+  width: 210px;
+  height: 210px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5c2ca,
+      #d9def8
+    );
+
+  border: 8px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 60px;
+  font-weight: 800;
+
+  color: #172044;
+
+  box-shadow:
+    0 20px 50px rgba(23, 32, 68, 0.15);
+}
+
+
+/* =========================
+   CODE CARD
+========================= */
+
+.code-card {
+  position: absolute;
+
+  right: 5%;
+  top: 18%;
+
+  z-index: 8;
+
+  width: 220px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 20px 40px rgba(31, 39, 77, 0.12);
+
+  transform: rotate(3deg);
+}
+
+.code-header {
+  display: flex;
+  gap: 6px;
+
+  padding: 10px 12px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.code-header span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #d9d9d9;
+}
+
+.code-content {
+  padding: 15px;
+
+  font-family: monospace;
+
+  font-size: 12px;
+
+  color: #4d5570;
+
+  line-height: 1.8;
+}
+
+.indent {
+  padding-left: 15px;
+}
+
+.purple {
+  color: #8367b7;
+}
+
+.pink {
+  color: #d77d91;
+}
+
+.blue {
+  color: #5c83ba;
+}
+
+
+/* =========================
+   FLOATING CARDS
+========================= */
+
+.floating-card {
+  position: absolute;
+
+  z-index: 10;
+
+  background: white;
+
+  padding: 12px 18px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 15px 30px rgba(32, 42, 80, 0.12);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  font-size: 15px;
+}
+
+.floating-card strong {
+  font-size: 14px;
+}
+
+.card-one {
+  left: 4%;
+  top: 25%;
+
+  transform: rotate(-7deg);
+}
+
+.card-two {
+  right: 7%;
+  bottom: 20%;
+
+  transform: rotate(6deg);
+}
+
+
+/* =========================
+   DECORATIONS
+========================= */
+
+.decor-dots {
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  left: 7%;
+  top: 23%;
+
+  background-image:
+    radial-gradient(#f3aebc 2px, transparent 2px);
+
+  background-size: 17px 17px;
+
+  opacity: 0.7;
+}
+
+.decor-square {
+  position: absolute;
+
+  right: 8%;
+  top: 15%;
+
+  width: 70px;
+  height: 70px;
+
+  border: 2px solid #6d7594;
+
+  transform: rotate(8deg);
+
+  opacity: 0.7;
+}
+
+
+/* =========================
+   SCROLL
+========================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 25px;
+  left: 7%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #66708e;
+
+  font-size: 13px;
+}
+
+.scroll-indicator span {
+  width: 30px;
+  height: 1px;
+
+  background: #66708e;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .landing-nav {
+    padding: 20px 5%;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .landing-content {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding-top: 120px;
+  }
+
+  .intro {
+    margin: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .availability {
+    justify-content: center;
+  }
+
+  .visual {
+    height: 420px;
+  }
+
+  .visual-bg {
+    width: 330px;
+    height: 350px;
+  }
+
+  .code-card {
+    right: 0;
+  }
+}

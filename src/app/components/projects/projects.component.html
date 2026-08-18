@@ -1,0 +1,178 @@
+<section id="portfolio" class="projects-section">
+    <nav class="landing-nav">
+
+   <div class="logo">
+ <span>
+         <a href="/" class="active">
+        R
+      </a>
+      </span>    
+        <strong>
+          Rama Dev</strong>
+    </div>
+
+
+    <div class="nav-links">
+
+      <a href="#home" class="active">
+        Accueil
+      </a>
+
+      
+
+    </div>
+
+    <a
+      href="assets/images/CV_2026-08-18_Rama_Seck.pdf"
+      target="_blank"
+      download="CV_Rama_Seck"
+      class="cv-btn"
+    >
+      Télécharger mon CV
+    </a>
+
+  </nav>
+
+  <div class="projects-container">
+
+    <!-- HEADER -->
+
+   <!--  <div class="projects-header">
+
+      <div>
+
+        <span class="section-label">
+          PORTFOLIO
+        </span>
+
+        <h2>
+          Mes projets
+          <span>sélectionnés.</span>
+        </h2>
+
+      </div>
+
+      <p>
+        Une sélection de projets web et mobiles
+        réalisés autour de problématiques concrètes.
+      </p>
+
+    </div>
+ -->
+
+    <!-- PROJECTS -->
+
+    <div class="projects-list">
+
+      <article
+        *ngFor="let project of projects; let i = index"
+        class="project-card"
+      >
+
+        <div class="project-number">
+          {{ (i + 1).toString().padStart(2, '0') }}
+        </div>
+
+
+        <!-- IMAGE -->
+
+        <div class="project-image">
+
+          <img
+            *ngIf="!project.image.endsWith('.webm')"
+            [src]="project.image"
+            [alt]="project.title"
+          />
+
+          <video
+            *ngIf="project.image.endsWith('.webm')"
+            [src]="project.image"
+            muted
+            loop
+            autoplay
+          ></video>
+
+          <div class="image-overlay"></div>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="project-content">
+
+          <span class="project-category">
+            {{ project.category || 'Application' }}
+          </span>
+
+          <h3>
+            {{ project.title }}
+          </h3>
+
+          <p>
+            {{ project.description || 'Projet de développement web et mobile conçu pour répondre à un besoin concret.' }}
+          </p>
+
+
+          <!-- Technologies -->
+
+          <div class="technologies">
+
+            <span
+              *ngFor="let tech of project.languages.split(',')"
+            >
+              {{ tech.trim() }}
+            </span>
+
+          </div>
+
+
+          <!-- Actions -->
+
+          <div class="project-actions">
+
+            <a
+              *ngIf="project.siteUrl"
+              [href]="project.siteUrl"
+              target="_blank"
+            >
+              Voir le projet
+              <span>↗</span>
+            </a>
+
+            <a
+              *ngIf="project.appurl"
+              [href]="project.appurl"
+              target="_blank"
+            >
+              Google Play
+              <span>↗</span>
+            </a>
+
+            <a
+              *ngIf="project.gtihubURL"
+              [href]="project.gtihubURL"
+              target="_blank"
+            >
+              GitHub
+              <span>↗</span>
+            </a>
+
+            <button
+              (click)="openModal(project)"
+            >
+              Détails
+              <span>→</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
