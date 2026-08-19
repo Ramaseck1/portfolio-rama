@@ -427,7 +427,20 @@
 
     height: 280px;
   }
+  .landing-nav {
+    padding: 20px 5%;
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
 
+  .nav-icons {
+    display: none;
+  }
+
+  .cv-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
   .project-content {
     grid-column: 2;
   }
@@ -444,6 +457,20 @@
     grid-template-columns: 1fr;
 
     padding: 20px;
+  }
+     .landing-nav {
+    padding: 20px 5%;
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .cv-btn {
+    padding: 10px 16px;
+    font-size: 14px;
   }
 
   .project-number {
