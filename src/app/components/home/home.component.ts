@@ -9,5 +9,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  scrollTo(id: string, event: Event) {
+    event.preventDefault();
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
